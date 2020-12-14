@@ -44,7 +44,7 @@ function Home() {
                         }
                     />
                     <Route
-                        path='/:id'
+                        path='/starship'
                         render={({location}) => 
                             <StarshipDetails location={location} />
                         }

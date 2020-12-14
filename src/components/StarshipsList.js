@@ -5,7 +5,7 @@ function StarshipsList(props) {
         return (
             <div key={index}>
                 <Link 
-                    to={{pathname: '/:id', state: starship}}
+                    to={{pathname: '/starship', state: starship}}
                     key={starship.name}
                 >
                     {starship.name}
