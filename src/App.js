@@ -1,6 +1,7 @@
 import { BrowserRouter, Route } from 'react-router-dom'
 
 import Home from './components/Home'
+import StarshipPage from './components/StarshipPage'
 
 function App() {
     return (
@@ -11,12 +12,6 @@ function App() {
                     exact
                     path='/'
                     component={ Home }
-                />
-                <Route
-                    path='/:id'
-                    render={({ location }) => 
-                        <StarshipPage location={ location } />
-                    }
                 />
             </>
         </BrowserRouter>
