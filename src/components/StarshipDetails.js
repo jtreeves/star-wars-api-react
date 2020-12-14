@@ -1,12 +1,15 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 
-function StarshipPage() {
-    return (
+function StarshipDetails(props) {
+    const starship = props.location.state
+
+    return(
         <>
+            <p>NAME: {starship.name}</p> 
+            <p>MODEL: {starship.model}</p>
+            <p><Link to='/'>RETURN</Link></p>
         </>
     )
 }
 
-export default StarshipPage
+export default StarshipDetails

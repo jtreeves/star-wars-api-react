@@ -30,7 +30,7 @@ function Home() {
     
     function displayStarships() {
         if (error) {
-            return <div>Error: { error.message }</div>
+            return <div>Error: {error.message}</div>
         } else if (!isLoaded) {
             return <div>Loading...</div>
         } else {
@@ -39,13 +39,13 @@ function Home() {
                     <Route
                         exact path='/'
                         render={() => 
-                            <StarshipsList starships={ starships } />
+                            <StarshipsList starships={starships} />
                         }
                     />
                     <Route
                         path='/:id'
-                        render={({ location }) => 
-                            <StarshipDetails location={ location } />
+                        render={({location}) => 
+                            <StarshipDetails location={location} />
                         }
                     />
                 </Switch>
@@ -59,7 +59,7 @@ function Home() {
     
     return(
         <>
-            { displayStarships() }
+            {displayStarships()}
         </>
     )
 }
