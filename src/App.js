@@ -1,7 +1,7 @@
 import { BrowserRouter, Route } from 'react-router-dom'
 
 import Home from './components/Home'
-import StarshipPage from './components/StarshipPage'
+import StarshipPage from './components/StarshipDetails'
 
 function App() {
     return (

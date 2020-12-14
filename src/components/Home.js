@@ -3,7 +3,7 @@ import { Switch, Route, Link } from 'react-router-dom'
 import Axios from 'axios'
 
 import StarshipsList from './StarshipsList'
-import StarshipPage from './StarshipPage'
+import StarshipDetails from './StarshipDetails'
 
 function Home() {
     const [starships, setStarships] = useState([])
@@ -45,7 +45,7 @@ function Home() {
                     <Route
                         path='/:id'
                         render={({ location }) => 
-                            <StarshipPage location={ location } />
+                            <StarshipDetails location={ location } />
                         }
                     />
                 </Switch>
