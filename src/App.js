@@ -8,11 +8,11 @@ function App() {
         <BrowserRouter>
             <>
                 <h1>STAR WARS STARSHIPS</h1>
-                <Route
+                {/* <Route
                     exact
                     path='/'
                     component={ Home }
-                />
+                /> */}
             </>
         </BrowserRouter>
     )

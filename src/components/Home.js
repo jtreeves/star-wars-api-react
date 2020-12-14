@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 import Axios from 'axios'
 
+import StarshipsList from './StarshipsList'
+import StarshipPage from './StarshipPage'
+
 function Home() {
     const [starships, setStarships] = useState([])
     const [isLoaded, setIsLoaded] = useState(false)
@@ -34,6 +37,12 @@ function Home() {
             return (
                 <Switch>
                     <Route
+                        exact path='/'
+                        render={() => 
+                            <StarshipsList starships={ starships } />
+                        }
+                    />
+                    <Route
                         path='/:id'
                         render={({ location }) => 
                             <StarshipPage location={ location } />
@@ -47,17 +56,6 @@ function Home() {
     useEffect(() => {
         getStarships()
     }, [])
-
-    // state.starships.map(starship =>
-    //     <Link
-    //       to={{
-    //         pathname: '/starship',
-    //         state: starship
-    //       }}
-    //       key={starship.name}
-    //     >
-    //       {{starship.name}}
-    //     </Link>
     
     return(
         <>
