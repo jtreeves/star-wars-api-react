@@ -7,7 +7,7 @@ import StarshipDetails from './StarshipDetails'
 
 function Home() {
     const [starships, setStarships] = useState([])
-    const [isLoaded, setIsLoaded] = useState(false)
+    const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
     
     async function getStarships() {
@@ -22,8 +22,9 @@ function Home() {
             const starshipsData4 = starshipsQuery4.data.results
             const starshipsData = starshipsData1.concat(starshipsData2, starshipsData3, starshipsData4)
             setStarships(starshipsData)
+            setLoading(false)
         } catch(errorMessage) {
-            setIsLoaded(false)
+            setLoading(true)
             setError(errorMessage)
         }
     }
@@ -31,7 +32,7 @@ function Home() {
     function displayStarships() {
         if (error) {
             return <div>Error: {error.message}</div>
-        } else if (!isLoaded) {
+        } else if (loading) {
             return <div>Loading...</div>
         } else {
             return (
