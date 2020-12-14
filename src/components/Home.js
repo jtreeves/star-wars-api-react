@@ -57,7 +57,7 @@ function Home() {
         getStarships()
     }, [])
     
-    return(
+    return (
         <>
             {displayStarships()}
         </>

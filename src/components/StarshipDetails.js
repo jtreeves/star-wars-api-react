@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 function StarshipDetails(props) {
     const starship = props.location.state
 
-    return(
+    return (
         <>
             <p>NAME: {starship.name}</p> 
             <p>MODEL: {starship.model}</p>
